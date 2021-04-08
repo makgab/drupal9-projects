@@ -1,0 +1,22 @@
+---------------
+tanarurkerem.hu
+---------------
+
+  Drupal 9
+
+
+
+* DRUSH használata
+
+
+  (* drush uli)
+
+* Cache rebuild:     drush cr
+
+* Module genrate:    drush generate module
+
+* Module enable:     drush en module_name
+
+* Generate hook:     drush generate hook
+
+

@@ -8,3 +8,51 @@
  * This file is no longer required in Drupal 8.
  * @see https://www.drupal.org/node/2217931
  */
+
+/**
+ * Implements hook_form_alter().
+ */
+function teszt_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if($form_id == 'user_register_form') {
+    $form['GDPR'] =[
+      '#type' => 'checkbox',
+      '#title' => 'Az adatkezelési tájékoztatót tudomásul vettem',
+      '#required' => true,
+    ];
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function teszt_theme($existing, $type, $theme, $path) {
+  return [
+    'banner' => [
+      'variables' => [
+        'slogans' => NULL,
+      ],
+    ],
+  ];
+}
+
+function template_preprocess_banner(&$variables) {
+  if (is_array($variables['slogans'])) {
+    $variables['slogans'] = join(', ', $variables['slogans']);
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_create().
+ */
+function teszt_node_create(\Drupal\Core\Entity\EntityInterface $entity) {
+  \Drupal::messenger()->addMessage('Hello:'. $entity->title->value);
+  \Drupal::logger('example')->info('ENTITY_TYPE created: @label', ['@label' => $entity->label()]);
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function teszt_node_insert(\Drupal\Core\Entity\EntityInterface $entity) {
+  \Drupal::messenger()->addMessage('Hello:'. $entity->title->value);
+  \Drupal::logger('example')->info('ENTITY_TYPE created: @label', ['@label' => $entity->label()]);
+}

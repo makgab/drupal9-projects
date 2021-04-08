@@ -1,0 +1,6 @@
+teszt.example:
+  route_name: teszt.example
+  title: 'Action'
+  appears_on:
+    - teszt.second
+    - teszt.third

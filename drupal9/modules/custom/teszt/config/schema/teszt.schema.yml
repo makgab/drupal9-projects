@@ -1,0 +1,18 @@
+block.settings.teszt_secondblock:
+  type: block_settings
+  label: 'SecondBlock block'
+  mapping:
+    foo:
+      type: string
+      label: Foo
+    baz:
+      type: string
+      label: Baz
+
+filter_settings.teszt_gyumi:
+  type: filter
+  label: 'Gyumi filter'
+  mapping:
+    example:
+      type: string
+      label: Example

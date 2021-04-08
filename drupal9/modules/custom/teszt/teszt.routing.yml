@@ -1,15 +1,57 @@
 teszt.example:
   path: '/teszt/example'
   defaults:
-    _title: 'Example'
+    _title: 'Example2'
     _controller: '\Drupal\teszt\Controller\TesztController::build'
   requirements:
     _permission: 'access content'
 
-teszt.settings_form:
-  path: '/admin/config/system/teszt'
+teszt.second:
+  path: '/teszt/second'
   defaults:
-    _title: 'Teszt settings'
-    _form: 'Drupal\teszt\Form\SettingsForm'
+    _title: 'Second'
+    _controller: '\Drupal\teszt\Controller\SecondController::build'
   requirements:
-    _permission: 'administer teszt configuration'
+    _permission: 'access content'
+
+teszt.third:
+  path: '/teszt/second/alter'
+  defaults:
+    _title: 'Alter'
+    _controller: '\Drupal\teszt\Controller\ThirdController::build'
+  requirements:
+    _permission: 'access content'
+
+teszt.parameter:
+  path: '/teszt/second/{parameter}'
+  defaults:
+    _title: 'Parameter'
+    _controller: '\Drupal\teszt\Controller\ParameterController::build'
+  requirements:
+    _permission: 'access content'
+
+teszt.message.new:
+  path: '/teszt/form'
+  defaults:
+    _title: 'Form'
+    _form: 'Drupal\teszt\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'
+
+teszt.message.edit:
+  path: '/teszt/form/{id}'
+  defaults:
+    _title: 'Form'
+    _form: 'Drupal\teszt\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'
+    _csrf_token: 'TRUE'
+
+
+teszt.multistep:
+  path: '/teszt/multistep'
+  defaults:
+    _title: 'Multistep'
+    _form: 'Drupal\teszt\Form\MultistepForm'
+  requirements:
+    _permission: 'access content'

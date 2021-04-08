@@ -1,6 +1,6 @@
 name: Teszt
 type: module
-description: Test module.
+description: This is a Test!!!
 package: Custom
 core: 8.x
 core_version_requirement: ^8 || ^9

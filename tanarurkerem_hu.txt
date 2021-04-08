@@ -1,0 +1,77 @@
+---------------
+tanarurkerem.hu
+---------------
+
+  Drupal 9
+
+
+  * https://hub.docker.com/r/tanarurkerem/drupal
+
+  docker pull tanarurkerem/drupal
+
+* docker-drupal
+
+  This version of image is for only development purpose
+
+  Woluld you like to try Drupal 9? Use this one simple command for it:
+
+    docker run --name=drupal9 --hostname=drupal9-srv -v $(pwd)/drupal:/drupal -p 8080:80 tanarurkerem/drupal
+
+
+
+  If you would like to login into a site run the following command for one time login link:
+
+    docker exec -it drupal9 drush uli
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------
+
+* PHP futtatókörnyezetben
+
+composer create-project drupal/recommended-project drupal
+
+cd drupal
+
+composer require --dev drupal/core-dev
+
+composer require drush/drush
+
+composer require drupal/devel
+
+
+
+* Docker futtatókörnyezet OSX-en és Linuxon:
+
+docker run -ti -v $(pwd):/drupal tanarurkerem/drupal
+(docker run -ti -v $(pwd):/drupal -p 8080:80 --entrypoint=/bin/bash tanarurkerem/drupal)
+
+
+* Windowson Powershell-ben:
+
+docker run -ti -v ${pwd}:/drupal tanarurkerem/drupal
+
+
+
+* Ezután mindkét rendszeren:
+(docker-compose.override.yml beállítása ha szükséges)
+
+./helper/up
+
+
+
+* Modul létrehozása
+Repo: https://gitlab.com/tanarurkerem/d9backend2020
+
+drush generate module
+
+.gitignore
+vendor
+files
+web/sites/default/files
+docker-compose.override.yml
+

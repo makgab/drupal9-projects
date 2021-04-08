@@ -5,15 +5,15 @@ namespace Drupal\teszt\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 
 /**
- * Provides an example block.
+ * Provides a firstblock block.
  *
  * @Block(
- *   id = "teszt_example",
- *   admin_label = @Translation("Example"),
- *   category = @Translation("Teszt")
+ *   id = "teszt_firstblock",
+ *   admin_label = @Translation("FirstBlock"),
+ *   category = @Translation("Custom")
  * )
  */
-class ExampleBlock extends BlockBase {
+class FirstblockBlock extends BlockBase {
 
   /**
    * {@inheritdoc}

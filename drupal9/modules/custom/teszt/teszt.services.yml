@@ -1,4 +1,16 @@
 services:
+  teszt.service1:
+    class: Drupal\teszt\Service1
+
+  teszt.service2:
+    class: Drupal\teszt\Service2
+    arguments: ['@string_translation']
+
+  teszt.middleware:
+    class: Drupal\teszt\TesztMiddleware
+    tags:
+      - { name: http_middleware, priority: 1000 }
+
   teszt.event_subscriber:
     class: Drupal\teszt\EventSubscriber\TesztSubscriber
     arguments: ['@messenger']

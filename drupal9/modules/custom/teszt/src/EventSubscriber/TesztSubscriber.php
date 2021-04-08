@@ -2,7 +2,12 @@
 
 namespace Drupal\teszt\EventSubscriber;
 
+use Composer\EventDispatcher\Event;
+use Drupal\Core\Entity\EntityTypeEvent;
+use Drupal\Core\Entity\EntityTypeEvents;
 use Drupal\Core\Messenger\MessengerInterface;
+use Drupal\teszt\Event\TesztEvent;
+use Drupal\teszt\Event\TesztEvents;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
@@ -30,33 +35,16 @@ class TesztSubscriber implements EventSubscriberInterface {
     $this->messenger = $messenger;
   }
 
-  /**
-   * Kernel request event handler.
-   *
-   * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
-   *   Response event.
-   */
-  public function onKernelRequest(GetResponseEvent $event) {
-    $this->messenger->addStatus(__FUNCTION__);
+  public function onView(TesztEvent $event)
+  {
+    $this->messenger->addStatus('Hello View:' . $event->getValami());
   }
-
-  /**
-   * Kernel response event handler.
-   *
-   * @param \Symfony\Component\HttpKernel\Event\FilterResponseEvent $event
-   *   Response event.
-   */
-  public function onKernelResponse(FilterResponseEvent $event) {
-    $this->messenger->addStatus(__FUNCTION__);
-  }
-
   /**
    * {@inheritdoc}
    */
   public static function getSubscribedEvents() {
     return [
-      KernelEvents::REQUEST => ['onKernelRequest'],
-      KernelEvents::RESPONSE => ['onKernelResponse'],
+      TesztEvents::VIEW => ['onView'],
     ];
   }
 

@@ -1,0 +1,8 @@
+teszt.second:
+  title: 'View'
+  base_route: teszt.second
+  route_name: teszt.second
+teszt.third:
+  title: 'Alter'
+  base_route: teszt.second
+  route_name: teszt.third

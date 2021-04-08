@@ -1,6 +1,5 @@
-teszt.settings_form:
-  title: Teszt
-  description: Configure Teszt.
-  parent: system.admin_config_system
-  route_name: teszt.settings_form
-  weight: 10
+teszt.second:
+  title: 'Second'
+  description: 'This is an example'
+  route_name: teszt.second
+  menu_name: main
