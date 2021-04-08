@@ -1,0 +1,4 @@
+administer teszt configuration:
+  title: 'Administer teszt configuration'
+  description: 'Optional description.'
+  restrict access: true

@@ -1,0 +1,6 @@
+teszt.settings_form:
+  title: Teszt
+  description: Configure Teszt.
+  parent: system.admin_config_system
+  route_name: teszt.settings_form
+  weight: 10

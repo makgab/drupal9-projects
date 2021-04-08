@@ -1,0 +1,15 @@
+teszt.example:
+  path: '/teszt/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\teszt\Controller\TesztController::build'
+  requirements:
+    _permission: 'access content'
+
+teszt.settings_form:
+  path: '/admin/config/system/teszt'
+  defaults:
+    _title: 'Teszt settings'
+    _form: 'Drupal\teszt\Form\SettingsForm'
+  requirements:
+    _permission: 'administer teszt configuration'
