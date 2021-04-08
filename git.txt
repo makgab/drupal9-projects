@@ -1,6 +1,6 @@
 Basic commands:
 
-Configure git author: git config --global user.name "Sam Smith" git config --global user.email sam@example.com
+Configure git author: git config --global user.name "Sam Smith"            git config --global user.email sam@example.com
 
 Create local repo: git init
 
@@ -8,13 +8,13 @@ Clone a git project ot local: git clone /path/to/repository
 
 For a remote server, use: git clone username@host:/path/to/repository
 
-Add file to staging: git add git add *
+Add file to staging: git add            git add *
 
 Commit changes: git commit -m "Commit message"
 
 Commit any files you've added with git add, and also commit any files you've changed since then: git commit -a
 
-Send changes to the master branch of your remote repository: git push origin master
+Send changes to the master branch of your remote repository: git push              git push origin master
 
 List the files you've changed and those you still need to add or commit: git status
 
