@@ -13,8 +13,9 @@ tanarurkerem.hu
 
 * Cache rebuild:              drush cr
                              (drush devel-reinstall modulename)
+                             (drush cex    #drush config-export)
 
-* Module genrate:             drush generate module
+* Module generate:            drush generate module
 
 * Module enable:              drush en module_name
 
@@ -29,4 +30,8 @@ tanarurkerem.hu
 
 * Generate action (button):   drush generate yml-links-action
                              (drush generate action)
+
+* Generate Middleware:        drush generate middleware
+
+* Generate Block:             drush generate block
 
