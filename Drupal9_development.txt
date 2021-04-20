@@ -5,7 +5,6 @@ tanarurkerem.hu
   Drupal 9
 
 
-
 * DRUSH használata
 
 
@@ -35,3 +34,8 @@ tanarurkerem.hu
 
 * Generate Block:             drush generate block
 
+* Generate Hook (theme):      drush generate hook                    (hook name: theme)
+
+* Generate Module Libraries:  drush generate module-libraries
+
+* Generate Render Element:    drush generate render-element
