@@ -39,3 +39,7 @@ tanarurkerem.hu
 * Generate Module Libraries:  drush generate module-libraries
 
 * Generate Render Element:    drush generate render-element
+
+* Generate Form:              drush generate form-simple             (https://api.drupal.org/api/drupal/elements)
+
+* Generate Install:           drush generate install                 (for tables!)
