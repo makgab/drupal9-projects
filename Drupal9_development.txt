@@ -43,3 +43,10 @@ tanarurkerem.hu
 * Generate Form:              drush generate form-simple             (https://api.drupal.org/api/drupal/elements)
 
 * Generate Install:           drush generate install                 (for tables!)
+
+
+
+DRUPAL update:
+https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer
+    * edit "composer.json" and set drupal version!
+    * composer update drupal/core "drupal/core-*" --with-all-dependencies
