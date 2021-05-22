@@ -20,6 +20,8 @@ tanarurkerem.hu
 
 * Generate hook:              drush generate hook
 
+* Generate controller:        drush generate controller               (controller for modules)
+
 * Generate service:           drush generate service-custom
 
 * Generate menu:              drush generate menu-links
