@@ -52,3 +52,26 @@ DRUPAL update:
 https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer
     * edit "composer.json" and set drupal version!
     * composer update drupal/core "drupal/core-*" --with-all-dependencies
+
+    # Activate maintenance mode
+    drush state:set system.maintenance_mode 1
+    # and drush cache:rebuild
+    drush cr
+
+    # PHP update
+    composer update drupal/core "drupal/core-*" --with-all-dependencies
+    # or
+    composer update drupal/core --with-dependencies
+
+    # update DB:
+    drush updatedb
+
+    # cache rebuild
+    drush cr
+
+    # Deactivate maintenance mode
+    drush state:set system.maintenance_mode 0
+
+    # and then drush cache:rebuild
+    drush cr
+
