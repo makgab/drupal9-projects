@@ -52,6 +52,7 @@ tanarurkerem.hu
 DRUPAL update:
 -------------
 * https://www.drupal.org/docs/updating-drupal/updating-drupal-core-via-composer
+* https://www.drupal.org/docs/updating-drupal/updating-modules-and-themes-using-composer
 
     * edit "composer.json / .lock" and set drupal version!
 
