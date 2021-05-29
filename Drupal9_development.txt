@@ -56,6 +56,16 @@ DRUPAL update:
 
     * edit "composer.json / .lock" and set drupal version!
 
+    # list updates
+    composer outdated "drupal/*"
+    # List security updates
+    drush pm:security
+    
+    # install module updates
+    composer update drupal/modulename --with-dependencies
+    composer require drupal/modulename:^2.0
+    
+
     # Activate maintenance mode
     drush state:set system.maintenance_mode 1
     # and drush cache:rebuild
